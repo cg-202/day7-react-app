@@ -3,24 +3,15 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  // this is recommend for inline styling
-  let mystyle = { fontSize: 21, backgroundColor: "red" };
-
   return (
     <div>
-      <h1>External Styling</h1>
-      <p className="primary">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      <h1 className="bg-primary text-light p-3">Bootstrap Demo</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        laborum aut, rerum dicta nulla quasi quo perspiciatis odit maiores
+        consequatur maxime provident doloribus voluptate quis commodi. Quasi
+        dolores autem ipsa?
       </p>
-
-      <h1>Inline Styling in React</h1>
-
-      <p style={{ fontSize: 21, background: "tomato" }}>
-        This approach is not recommended!!
-      </p>
-
-      {/** Style Using the object */}
-      <p style={mystyle}>Lorem ipsum dolor sit amet.</p>
     </div>
   );
 }
