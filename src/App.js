@@ -6,11 +6,21 @@ function App() {
   // Array Destructed
   let [list, setList] = useState([]);
 
+  // 1
+  let [todoText, setTodoText] = useState("");
+  let updateTodoText = (e) => {
+    // console.log("Updat The INput Box", e.target.value);
+    setTodoText(e.target.value);
+  };
+
   let addPost = () => {
     console.log("Add Post Methoddd");
     // Array Cloning
-    const newList = ["New Todo", ...list];
+    // const newList = ["New Todo", ...list];
+    const newList = [todoText, ...list];
     setList(newList);
+
+    setTodoText("");
   };
 
   return (
@@ -19,7 +29,16 @@ function App() {
 
       <div className="row">
         <div className="col-9">
-          <input type="text" className="form-control form-control-lg" />
+          {/**
+           * 2. update the value propert
+           * 3. onchange event
+           * */}
+          <input
+            type="text"
+            value={todoText}
+            onChange={updateTodoText}
+            className="form-control form-control-lg"
+          />
         </div>
 
         <div className="col-3">
