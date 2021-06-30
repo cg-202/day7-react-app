@@ -37,6 +37,11 @@ function App() {
           {item}
         </div>
       ))}
+
+      {/** Conditional Logic */}
+      {list.length == 0 && (
+        <div className="alert alert-success my-1">You have no Pending Task</div>
+      )}
     </div>
   );
 }
