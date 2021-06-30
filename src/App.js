@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function App() {
   // Array Destructed
-  let [list, setList] = useState(["delhi"]);
+  let [list, setList] = useState([]);
 
   let addPost = () => {
     console.log("Add Post Methoddd");
